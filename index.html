@@ -3,295 +3,436 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Likith K | Robotics & Embedded Systems Engineering Portfolio</title>
+  <title>Likith Krishnappa | Robotics & Automation Engineer</title>
+  <link rel="stylesheet" href="style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --bg: #0b0f19;
-      --card-bg: #111827;
-      --card-border: #1f2937;
-      --accent: #2563eb;
-      --accent-glow: rgba(37, 99, 235, 0.2);
-      --text: #f3f4f6;
-      --text-muted: #9ca3af;
-      --tag-bg: #1e293b;
-      --tag-text: #93c5fd;
-    }
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-    body {
-      font-family: 'Inter', sans-serif;
-      background-color: var(--bg);
-      color: var(--text);
-      line-height: 1.6;
-      padding: 3rem 1.5rem;
-    }
-    .container {
-      max-width: 980px;
-      margin: 0 auto;
-    }
-    header {
-      margin-bottom: 3.5rem;
-      border-bottom: 1px solid var(--card-border);
-      padding-bottom: 2rem;
-    }
-    .name-badge {
-      display: inline-block;
-      padding: 0.25rem 0.75rem;
-      background: var(--accent-glow);
-      color: var(--tag-text);
-      border: 1px solid #3b82f6;
-      border-radius: 9999px;
-      font-size: 0.85rem;
-      font-weight: 600;
-      margin-bottom: 1rem;
-    }
-    h1 {
-      font-size: 2.5rem;
-      font-weight: 700;
-      letter-spacing: -0.025em;
-      margin-bottom: 0.5rem;
-    }
-    .subtitle {
-      font-size: 1.15rem;
-      color: var(--text-muted);
-      max-width: 720px;
-    }
-    .actions-bar {
-      display: flex;
-      gap: 1rem;
-      margin-top: 1.5rem;
-      flex-wrap: wrap;
-    }
-    .btn {
-      padding: 0.6rem 1.25rem;
-      border-radius: 8px;
-      font-size: 0.95rem;
-      font-weight: 500;
-      text-decoration: none;
-      transition: all 0.2s ease;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
-    .btn-primary {
-      background: var(--accent);
-      color: #fff;
-    }
-    .btn-primary:hover {
-      background: #1d4ed8;
-      box-shadow: 0 0 15px var(--accent-glow);
-    }
-    .btn-secondary {
-      background: var(--tag-bg);
-      color: var(--text);
-      border: 1px solid var(--card-border);
-    }
-    .btn-secondary:hover {
-      border-color: #4b5563;
-    }
-    .section-title {
-      font-size: 1.4rem;
-      font-weight: 600;
-      margin: 3rem 0 1.5rem;
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-    }
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(440px, 1fr));
-      gap: 1.5rem;
-    }
-    @media (max-width: 640px) {
-      .grid { grid-template-columns: 1fr; }
-    }
-    .card {
-      background-color: var(--card-bg);
-      border: 1px solid var(--card-border);
-      border-radius: 12px;
-      padding: 1.75rem;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      transition: border-color 0.2s, transform 0.2s;
-    }
-    .card:hover {
-      border-color: #3b82f6;
-      transform: translateY(-2px);
-    }
-    .card h3 {
-      font-size: 1.25rem;
-      margin-bottom: 0.5rem;
-      color: #fff;
-    }
-    .card p {
-      font-size: 0.95rem;
-      color: var(--text-muted);
-      margin-bottom: 1.25rem;
-    }
-    .highlights {
-      list-style: none;
-      margin-bottom: 1.25rem;
-    }
-    .highlights li {
-      position: relative;
-      padding-left: 1.25rem;
-      margin-bottom: 0.4rem;
-      font-size: 0.9rem;
-      color: #d1d5db;
-    }
-    .highlights li::before {
-      content: "•";
-      position: absolute;
-      left: 0;
-      color: #3b82f6;
-      font-weight: bold;
-    }
-    .tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-      margin-bottom: 1.5rem;
-    }
-    .tag {
-      background: var(--tag-bg);
-      color: var(--tag-text);
-      font-size: 0.75rem;
-      font-family: 'JetBrains Mono', monospace;
-      padding: 0.25rem 0.6rem;
-      border-radius: 6px;
-      border: 1px solid #1e3a8a;
-    }
-    .card-footer {
-      border-top: 1px solid var(--card-border);
-      padding-top: 1rem;
-    }
-    .link-btn {
-      color: #60a5fa;
-      text-decoration: none;
-      font-weight: 500;
-      font-size: 0.9rem;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.35rem;
-    }
-    .link-btn:hover {
-      text-decoration: underline;
-    }
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div class="container">
-    <header>
-      <div class="name-badge">Robotics & Automation Engineer</div>
-      <h1>Likith K</h1>
-      <p class="subtitle">
-        Hands-on systems engineer specializing in electro-mechanical prototyping, sensor integration, holonomic mobile kinematics, and edge TinyML deployment.
+
+  <!-- Sticky Glass Navbar -->
+  <nav class="navbar">
+    <div class="logo">LK<span>.</span></div>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#resume">Resume</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <div class="status-badge">Available for Full-time Roles · Bengaluru, India</div>
+      <h1 class="hero-title">Likith<br><span>Krishnappa</span></h1>
+      <p class="hero-description">
+        Robotics & Automation Engineer building <em>autonomous mobile robots</em>, kinematics simulation stacks, and <em>edge TinyML systems</em> from bare metal to deployment.
       </p>
-      <div class="actions-bar">
-        <a href="https://github.com/klikith70-boop" target="_blank" class="btn btn-primary">Visit GitHub Profile</a>
-        <a href="mailto:microgreenauto@gmail.com" class="btn btn-secondary">Contact via Email</a>
+      <div class="hero-cta-group">
+        <a href="#projects" class="btn primary">View My Work</a>
+        <a href="#contact" class="btn secondary">Get In Touch</a>
       </div>
-    </header>
-
-    <div class="section-title">Featured Engineering Projects</div>
-    <div class="grid">
-
-      <!-- Project 1 -->
-      <div class="card">
-        <div>
-          <h3>Automated Wet Floor Dryer Robot</h3>
-          <p>Autonomous mobile platform engineered to eliminate floor slip hazards via physical squeegee wiping and thermal convection drying.</p>
-          <ul class="highlights">
-            <li>Dual-stage continuous moisture absorption mechanism</li>
-            <li>Closed-loop surface moisture detection & state sequencing</li>
-            <li>Integrated obstacle clearance and motor driver control</li>
-          </ul>
-          <div class="tags">
-            <span class="tag">Embedded C++</span>
-            <span class="tag">Arduino</span>
-            <span class="tag">Mechatronics</span>
-            <span class="tag">Sensors</span>
-          </div>
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-val">6+</div>
+          <div class="stat-lbl">Real-World & Sim Builds</div>
         </div>
-        <div class="card-footer">
-          <a class="link-btn" href="https://github.com/klikith70-boop/automated-wet-floor-dryer-robot" target="_blank">View Repository →</a>
+        <div class="stat-card">
+          <div class="stat-val">IISc</div>
+          <div class="stat-lbl">Research Internship</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-val">ROS 2</div>
+          <div class="stat-lbl">Humble & Nav2 Stack</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-val">TinyML</div>
+          <div class="stat-lbl">Edge Hardware Deploy</div>
         </div>
       </div>
+    </div>
+  </section>
 
-      <!-- Project 2 -->
-      <div class="card">
-        <div>
-          <h3>4-Wheel Mecanum Mobile Platform</h3>
-          <p>Omnidirectional robotic base capable of instantaneous 360° holonomic traversal without altering heading angle.</p>
-          <ul class="highlights">
-            <li>Calculated 45° roller vector kinematics & decomposition</li>
-            <li>Dual L293D H-bridge actuation over 4 independent DC motors</li>
-            <li>Wireless teleoperation interface via HC-05 Bluetooth</li>
-          </ul>
-          <div class="tags">
-            <span class="tag">Kinematics</span>
-            <span class="tag">Arduino Uno</span>
-            <span class="tag">L293D</span>
-            <span class="tag">Bluetooth</span>
-          </div>
+  <!-- About Section -->
+  <section id="about" class="section container">
+    <div class="section-tag">About</div>
+    <div class="about-grid">
+      <div class="about-main">
+        <div class="profile-frame">
+          <img src="images/profile/profile.jpg" alt="Likith Krishnappa" onerror="this.style.display='none'" />
         </div>
-        <div class="card-footer">
-          <a class="link-btn" href="https://github.com/klikith70-boop/mecanum-wheel-omnidirectional-robot" target="_blank">View Repository →</a>
+        <div class="about-text">
+          <p>Robotics & Automation Engineering graduate from Visvesvaraya Technological University (VTU), Bengaluru.</p>
+          <p>I build robotics systems across the complete stack: physical simulations, real-time kinematics, custom sensor fusion filters, and low-latency embedded firmware. No off-the-shelf black boxes.</p>
+          <p>Engineered hardware and firmware pipelines at <strong>IISc</strong> for the <strong>ArrayButton</strong> acoustic platform, deploying TinyML models to ESP32-S3 silicon. Designed and implemented <strong>Project Kakashi</strong>, an EKF-stabilized dual-arm kinematic tracking framework under ROS 2 Humble and PyBullet.</p>
+          <div class="quick-links">
+            <a href="https://github.com/klikith70-boop" target="_blank" rel="noopener noreferrer">⌥ github.com/klikith70-boop</a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">↗ linkedin.com</a>
+          </div>
         </div>
       </div>
+      <div class="about-sidebar">
+        <h3>System Specs</h3>
+        <div class="meta-row"><span>Degree</span><span>B.E. Robotics & Automation</span></div>
+        <div class="meta-row"><span>Affiliation</span><span>VTU, Karnataka</span></div>
+        <div class="meta-row"><span>Location</span><span>Bengaluru, India</span></div>
+        <div class="meta-row"><span>Focus</span><span>ROS 2 · Controls · Edge AI</span></div>
+        <div class="meta-row"><span>Status</span><span>Graduate (Immediate)</span></div>
+        <div class="meta-row"><span>Hardware</span><span>Fusion 360 · FDM Prototyping</span></div>
+      </div>
+    </div>
+  </section>
 
-      <!-- Project 3 -->
-      <div class="card">
-        <div>
-          <h3>ArrayButton: Edge TinyML Interface</h3>
-          <p>Context-aware acoustic trigger hardware executing neural network wake-word models directly on-device without cloud infrastructure.</p>
-          <ul class="highlights">
-            <li>16 kHz 32-bit digital audio streaming via I2S DMA buffers</li>
-            <li>Quantized (int8) neural model inference using TFLM</li>
-            <li>Sub-100ms deterministic edge event triggering</li>
-          </ul>
-          <div class="tags">
-            <span class="tag">TinyML</span>
-            <span class="tag">ESP32</span>
-            <span class="tag">I2S Audio</span>
-            <span class="tag">TFLM / Edge Impulse</span>
-          </div>
-        </div>
-        <div class="card-footer">
-          <a class="link-btn" href="https://github.com/SH047/ArrayButton" target="_blank">View Repository (Collab) →</a>
+  <!-- Skills Section -->
+  <section id="skills" class="section container">
+    <div class="section-tag">Capabilities</div>
+    <h2 class="section-title">Production-grade<br><span>robotics stack.</span></h2>
+    <div class="skills-grid">
+      
+      <div class="skill-card">
+        <div class="skill-cat">Middleware & Simulation</div>
+        <h3>ROS & Physics Engines</h3>
+        <div class="pill-group">
+          <span>ROS 2 Humble</span><span>rclcpp</span><span>rclpy</span>
+          <span>TF2</span><span>URDF / Xacro</span><span>PyBullet</span>
+          <span>Gazebo</span><span>RViz</span><span>Robot State Publisher</span>
         </div>
       </div>
 
-      <!-- Project 4 -->
-      <div class="card">
-        <div>
-          <h3>LiDAR Autonomous Maze Solver</h3>
-          <p>Enclosed-environment navigation robot driven by 360° laser rangefinding and reactive wall-following control.</p>
-          <ul class="highlights">
-            <li>Real-time spatial sector segmentation on /scan data</li>
-            <li>Proportional corridor steering and deadlock recovery maneuvers</li>
-            <li>Operates deterministically without requiring pre-computed global maps</li>
-          </ul>
-          <div class="tags">
-            <span class="tag">ROS 2 Humble</span>
-            <span class="tag">Python</span>
-            <span class="tag">2D LiDAR</span>
-            <span class="tag">Reactive Nav</span>
-          </div>
+      <div class="skill-card">
+        <div class="skill-cat">Autonomy & State Estimation</div>
+        <h3>SLAM & Kinematics</h3>
+        <div class="pill-group">
+          <span>SLAM Toolbox</span><span>Nav2</span><span>EKF Fusion</span>
+          <span>Robot Localization</span><span>Null-space Control</span>
+          <span>Trajectory Tracking</span><span>Costmaps</span><span>Occupancy Grids</span>
         </div>
-        <div class="card-footer">
-          <a class="link-btn" href="https://github.com/klikith70-boop/lidar-autonomous-maze-solver" target="_blank">View Repository →</a>
+      </div>
+
+      <div class="skill-card">
+        <div class="skill-cat">Edge Intelligence</div>
+        <h3>TinyML & Perception</h3>
+        <div class="pill-group">
+          <span>OpenCV</span><span>TensorFlow Lite Micro</span><span>Edge Impulse</span>
+          <span>Wake-word Detection</span><span>Pose Estimation</span><span>Point Clouds</span>
+          <span>Camera Calibration</span><span>Sensor Alignment</span>
+        </div>
+      </div>
+
+      <div class="skill-card">
+        <div class="skill-cat">Embedded Systems</div>
+        <h3>Silicon & Firmware</h3>
+        <div class="pill-group">
+          <span>ESP32 / S3 / C3</span><span>Raspberry Pi 4</span><span>Arduino Nano / Uno</span>
+          <span>FreeRTOS</span><span>INMP441 I2S</span><span>BNO055 IMU</span>
+          <span>RPLiDAR</span><span>UART / I2C / SPI</span><span>CAN Bus</span>
+        </div>
+      </div>
+
+      <div class="skill-card">
+        <div class="skill-cat">Core Engineering</div>
+        <h3>Languages & Tooling</h3>
+        <div class="pill-group">
+          <span>C++</span><span>Python</span><span>Embedded C</span>
+          <span>Linux / Ubuntu</span><span>Git</span><span>FastAPI</span>
+          <span>Bash Scripting</span><span>CMake</span>
+        </div>
+      </div>
+
+      <div class="skill-card">
+        <div class="skill-cat">Mechatronics & Build</div>
+        <h3>Mechanical Prototyping</h3>
+        <div class="pill-group">
+          <span>Fusion 360 CAD</span><span>DFAM</span><span>FDM 3D Printing</span>
+          <span>Tolerance Analysis</span><span>Actuator Sizing</span><span>Harness Routing</span>
         </div>
       </div>
 
     </div>
-  </div>
+  </section>
+
+  <!-- Featured Projects Section -->
+  <section id="projects" class="section container">
+    <div class="section-tag">Case Studies</div>
+    <h2 class="section-title">Hardware & code<br><span>that executes.</span></h2>
+    <div class="project-list">
+
+      <!-- Project 01: 4-Wheel Mecanum Mobile Platform -->
+      <div class="project-card">
+        <div class="project-info">
+          <div class="project-meta">01 — Mobile Robotics & Embedded Control</div>
+          <div class="project-header">
+            <h3>4-Wheel Mecanum Omnidirectional Mobile Platform</h3>
+            <span class="project-tag">Hardware Build</span>
+          </div>
+          <ul class="project-bullets">
+            <li>Designed and built a 4-wheel independent-drive omnidirectional mobile base utilizing 45° angled roller Mecanum wheels for holonomic planar motion (translation, lateral strafing, and zero-radius rotation)[cite: 1, 2].</li>
+            <li>Integrated an Arduino controller with an L293D multi-channel motor driver shield to drive four DC gear motors with dedicated PWM speed and directional control[cite: 1, 2].</li>
+            <li>Implemented wireless serial teleoperation via an onboard Bluetooth transceiver module and designed a high-discharge dual 18650 Li-ion battery power distribution system[cite: 1, 2].</li>
+            <li>Formulated forward and inverse kinematic velocity vector mapping in embedded C++ to convert joystick vector inputs into synchronized individual wheel velocities.</li>
+          </ul>
+          <div class="project-pills">
+            <span>Arduino Uno</span>
+            <span>L293D Shield</span>
+            <span>Mecanum Kinematics</span>
+            <span>Bluetooth / UART</span>
+            <span>18650 Li-ion</span>
+            <span>Embedded C++</span>
+            <span>Holonomic Motion</span>
+          </div>
+          <a href="https://github.com/klikith70-boop" target="_blank" rel="noopener noreferrer" class="link-arrow">View Repository →</a>
+        </div>
+        <div class="project-visual">
+          <img src="images/projects/mecanum_platform.jpg" alt="4-Wheel Mecanum Omnidirectional Mobile Platform" />
+        </div>
+      </div>
+
+      <!-- Project 02: Project Kakashi -->
+      <div class="project-card">
+        <div class="project-info">
+          <div class="project-meta">02 — Advanced Manipulation & Kinematics</div>
+          <div class="project-header">
+            <h3>Project Kakashi | Visual-Guided Dual-Arm Synchronization</h3>
+            <span class="project-tag">ROS 2 & Controls</span>
+          </div>
+          <ul class="project-bullets">
+            <li>Architected a simulated dual-arm manipulation framework coordinating UR5, KUKA, and Franka Panda manipulators inside the PyBullet physics engine via ROS 2 Humble.</li>
+            <li>Formulated null-space redundancy projection algorithms to dynamically prevent joint limit violations during multi-arm synchronous trajectory execution.</li>
+            <li>Integrated an Extended Kalman Filter (EKF) to filter noisy visual tracking feedback, achieving stable sub-millimeter end-effector pose tracking.</li>
+          </ul>
+          <div class="project-pills">
+            <span>ROS 2 Humble</span>
+            <span>PyBullet</span>
+            <span>EKF</span>
+            <span>Null-Space Control</span>
+            <span>rclcpp / rclpy</span>
+            <span>C++ / Python</span>
+            <span>RViz</span>
+          </div>
+          <a href="https://github.com/klikith70-boop" target="_blank" rel="noopener noreferrer" class="link-arrow">View Repository →</a>
+        </div>
+        <div class="project-visual">
+          <img src="images/projects/kakashi.jpg" alt="Project Kakashi Dual-Arm Synchronization" />
+        </div>
+      </div>
+
+      <!-- Project 03: ArrayButton -->
+      <div class="project-card">
+        <div class="project-info">
+          <div class="project-meta">03 — IISc CPDM Research</div>
+          <div class="project-header">
+            <h3>ArrayButton | Edge Acoustic Awareness Platform</h3>
+            <span class="project-tag">TinyML Hardware</span>
+          </div>
+          <ul class="project-bullets">
+            <li>Engineered hardware and firmware for an edge-computing acoustic sensing device powered by an ESP32-S3 microcontroller and INMP441 omnidirectional I2S microphone.</li>
+            <li>Trained, quantized, and deployed on-device keyword spotting and wake-word classification models using Edge Impulse and TensorFlow Lite for Microcontrollers (TFLM).</li>
+            <li>Implemented FreeRTOS tasks with a non-blocking DMA ring-buffer audio pipeline for concurrent low-power inference and wireless state streaming.</li>
+          </ul>
+          <div class="project-pills">
+            <span>ESP32-S3</span>
+            <span>INMP441 (I2S)</span>
+            <span>FreeRTOS</span>
+            <span>Edge Impulse</span>
+            <span>TinyML</span>
+            <span>Embedded C++</span>
+          </div>
+          <a href="https://github.com/klikith70-boop" target="_blank" rel="noopener noreferrer" class="link-arrow">View Repository →</a>
+        </div>
+        <div class="project-visual">
+          <img src="images/projects/arraybutton.jpg" alt="ArrayButton Edge Platform" />
+        </div>
+      </div>
+
+      <!-- Project 04: CIPER -->
+      <div class="project-card">
+        <div class="project-info">
+          <div class="project-meta">04 — Autonomous Perception</div>
+          <div class="project-header">
+            <h3>CIPER | Multispectral Forensic Imaging Quadruped</h3>
+            <span class="project-tag">Computer Vision</span>
+          </div>
+          <ul class="project-bullets">
+            <li>Developed a multispectral non-invasive computer vision pipeline integrating UV and IR imaging payloads mounted directly on a quadruped robot platform.</li>
+            <li>Engineered OpenCV image registration, contrast-enhancement, and spectral band alignment algorithms executing in real-time under variable lighting.</li>
+            <li>Interfaced high-level target positioning with robot motion planning to execute automated forensic search and perimeter inspection routines.</li>
+          </ul>
+          <div class="project-pills">
+            <span>OpenCV</span>
+            <span>Multispectral Vision</span>
+            <span>Python</span>
+            <span>Quadruped Integration</span>
+            <span>Linux</span>
+          </div>
+          <a href="https://github.com/klikith70-boop" target="_blank" rel="noopener noreferrer" class="link-arrow">View Repository →</a>
+        </div>
+        <div class="project-visual">
+          <img src="images/projects/ciper.jpg" alt="CIPER Quadruped Imaging System" />
+        </div>
+      </div>
+
+      <!-- Project 05: Autonomous Maze-Solving AMR -->
+      <div class="project-card">
+        <div class="project-info">
+          <div class="project-meta">05 — Autonomous Navigation</div>
+          <div class="project-header">
+            <h3>Autonomous Maze-Solving AMR</h3>
+            <span class="project-tag">Mobile Robotics</span>
+          </div>
+          <ul class="project-bullets">
+            <li>Designed and fabricated a differential-drive autonomous mobile robot using Fusion 360, custom 3D-printed chassis brackets, and micro-geared encoder motors.</li>
+            <li>Implemented a 2D planar LiDAR SLAM pipeline to generate real-time 2D occupancy grids across unknown, dynamic maze environments.</li>
+            <li>Engineered dead-reckoning wheel odometry calibration and complementary filtering to correct drift across sharp cornering and long corridors.</li>
+          </ul>
+          <div class="project-pills">
+            <span>LiDAR</span>
+            <span>SLAM</span>
+            <span>Odometry Calibration</span>
+            <span>C++</span>
+            <span>Fusion 360</span>
+            <span>Motor Drivers</span>
+          </div>
+          <a href="https://github.com/klikith70-boop" target="_blank" rel="noopener noreferrer" class="link-arrow">View Repository →</a>
+        </div>
+        <div class="project-visual">
+          <img src="images/projects/maze_robot.jpg" alt="Autonomous Maze Solving Robot" />
+        </div>
+      </div>
+
+      <!-- Project 06: Kaira Smart Mirror -->
+      <div class="project-card">
+        <div class="project-info">
+          <div class="project-meta">06 — Interactive Vision</div>
+          <div class="project-header">
+            <h3>Kaira | Smart Mirror Computer Vision System</h3>
+            <span class="project-tag">Computer Vision</span>
+          </div>
+          <ul class="project-bullets">
+            <li>Built an edge-to-cloud smart mirror system integrating real-time human pose estimation, background subtraction, and virtual try-on pipelines.</li>
+            <li>Constructed an asynchronous, low-latency FastAPI backend handling image streaming and inference payloads under 45ms end-to-end latency.</li>
+            <li>Optimized frame processing pipelines using multi-threaded camera feeds in Python and OpenCV.</li>
+          </ul>
+          <div class="project-pills">
+            <span>OpenCV</span>
+            <span>Pose Estimation</span>
+            <span>FastAPI</span>
+            <span>Python</span>
+            <span>Multithreading</span>
+          </div>
+          <a href="https://github.com/klikith70-boop" target="_blank" rel="noopener noreferrer" class="link-arrow">View Repository →</a>
+        </div>
+        <div class="project-visual">
+          <img src="images/projects/kaira.jpg" alt="Kaira Smart Mirror Vision System" />
+        </div>
+      </div>
+
+      <!-- Project 07: Autonomous Wet Floor Dryer Robot -->
+      <div class="project-card">
+        <div class="project-info">
+          <div class="project-meta">07 — Mechatronics & Rapid Prototyping</div>
+          <div class="project-header">
+            <h3>Autonomous Wet Floor Dryer Robot</h3>
+            <span class="project-tag">Mechatronics Build</span>
+          </div>
+          <ul class="project-bullets">
+            <li>Engineered an autonomous mobile surface-drying robot prototype integrating moisture-detection sensors, hot air blowers, and UV disinfection modules.</li>
+            <li>Modeled the complete chassis, internal component mounts, and airflow ducting in Fusion 360 using Design for Additive Manufacturing (DFAM) principles.</li>
+            <li>Programmed the low-level edge controller in embedded C++ for automated surface-moisture boundary detection and emergency obstacle stopping.</li>
+          </ul>
+          <div class="project-pills">
+            <span>Fusion 360</span>
+            <span>DFAM / 3D Printing</span>
+            <span>Moisture Sensing</span>
+            <span>Thermal Control</span>
+            <span>Embedded C++</span>
+          </div>
+          <a href="https://github.com/klikith70-boop" target="_blank" rel="noopener noreferrer" class="link-arrow">View Repository →</a>
+        </div>
+        <div class="project-visual">
+          <img src="images/projects/floor_dryer.jpg" alt="Autonomous Wet Floor Dryer Robot" />
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Experience Section -->
+  <section id="experience" class="section container">
+    <div class="section-tag">Experience</div>
+    <h2 class="section-title">Where I've<br><span>conducted research.</span></h2>
+    <div class="timeline">
+      
+      <div class="timeline-item">
+        <div class="timeline-date">Research Period</div>
+        <div class="timeline-body">
+          <div class="timeline-role">Research Intern · CPDM</div>
+          <div class="timeline-company">Indian Institute of Science (IISc) · Bengaluru</div>
+          <ul class="timeline-points">
+            <li>Engineered hardware, firmware, and edge audio processing pipelines for the ArrayButton acoustic awareness platform.</li>
+            <li>Implemented FreeRTOS tasks on ESP32-S3 for zero-loss audio streaming across I2S and low-power wake-word detection using Edge Impulse.</li>
+            <li>Collaborated with cross-disciplinary researchers to validate sensor calibration accuracy, enclosure acoustics, and on-device power efficiency.</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Resume Section -->
+  <section id="resume" class="section container">
+    <div class="section-tag">Documentation</div>
+    <h2 class="section-title">Resume &<br><span>Credentials.</span></h2>
+    <div class="resume-box">
+      <div class="resume-card">
+        <h3>Curriculum Vitae</h3>
+        <p>Direct download of my latest resume covering technical specifications, ROS 2 pipelines, embedded hardware systems, and research deliverables.</p>
+        <div class="btn-group">
+          <a href="assets/Likith_Krishnappa_Resume.pdf" download class="btn primary">Download PDF</a>
+          <a href="assets/Likith_Krishnappa_Resume.pdf" target="_blank" class="btn secondary">View Online</a>
+        </div>
+        <div class="file-tag">File: Likith_Krishnappa_Resume.pdf</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section container">
+    <div class="section-tag">Contact</div>
+    <div class="contact-grid">
+      <div>
+        <h2 class="section-title">Let's build<br><span>autonomous systems.</span></h2>
+        <p class="contact-desc">
+          Open to full-time robotics software, embedded systems, and automation engineering roles in Bengaluru, remote, or international locations.
+        </p>
+        <div class="contact-methods">
+          <a href="mailto:www.likith.k@gmail.com" class="contact-item">
+            <div>Email</div>
+            <div>www.likith.k@gmail.com</div>
+          </a>
+          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="contact-item">
+            <div>LinkedIn</div>
+            <div>Connect on LinkedIn</div>
+          </a>
+          <a href="https://github.com/klikith70-boop" target="_blank" rel="noopener noreferrer" class="contact-item">
+            <div>GitHub</div>
+            <div>github.com/klikith70-boop</div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <span>© 2026 Likith Krishnappa</span>
+    <span>ROBOTICS & AUTOMATION ENGINEER</span>
+    <span>Bengaluru, India</span>
+  </footer>
+
 </body>
 </html>
